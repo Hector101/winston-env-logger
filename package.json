@@ -1,0 +1,14 @@
+{
+  "name": "winston-logger",
+  "description": "An express logger based on winston used to debug your app on different environments",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Hector101/winston-logger.git",
+  "author": "hector101 <hector1014really32@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "dotenv": "^8.0.0",
+    "winston": "^3.2.1"
+  }
+}
