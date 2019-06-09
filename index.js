@@ -86,13 +86,13 @@ const wLogger = createLogger({
   ),
 });
 
-const logger = {
+const loggerOptions = {
   info: options => wLogger.info.apply(wLogger, getWinstonArguments(options)),
   warn: options => wLogger.warn.apply(wLogger, getWinstonArguments(options)),
   error: options => wLogger.error.apply(wLogger, getWinstonArguments(options)),
 }
 
-function expressMiddleware() {
+function logger() {
   let requestCounter = 1;
 
   return function(req, res, next) {
@@ -105,13 +105,13 @@ function expressMiddleware() {
         .replace(/\n/g, '');     // remove new line characters
     }
 
-    logger.info(logData);
+    loggerOptions.info(logData);
     next();
   };
 }
 
 
 module.exports = {
-  ...logger,
-  expressMiddleware,
+  ...loggerOptions,
+  logger,
 };
