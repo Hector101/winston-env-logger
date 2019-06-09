@@ -59,6 +59,8 @@ This app and its functions are limited by time constraint and is in no way at it
 +  **[winston](https://www.npmjs.com/package/winston)** - A logger for just about everything.
 +  **[dotenv](https://www.npmjs.com/package/dotenv)** - Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env
 +  **[chalk](https://www.npmjs.com/package/chalk)** - Terminal string styling done right.
++  **[moment](https://www.npmjs.com/package/moment)** - A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
+
 
 
 ## Authors

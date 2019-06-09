@@ -66,12 +66,10 @@ const Transport = shouldOutputToFile ? winston.transports.File : winston.transpo
 
 const transportOptions = {
   json: false, // so error object makes it to the formatter function
-  level: 'info',
-  timestamp: () => moment().format('Y-MM-DD HH:mm:ss:SSS'),
 };
 
 if (shouldOutputToFile) {
-  transportOptions.filename = path.resolve(__dirname, path.join('logs', `${moment().week()} - ${moment().format('YYYY')}.log`));
+  transportOptions.filename = path.resolve(__dirname, path.join('logs', `${moment().format('MMMM')} - ${moment().format('YYYY')}.log`));
 }
 
 const wLogger = createLogger({

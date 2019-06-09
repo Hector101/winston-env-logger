@@ -1,7 +1,7 @@
 {
   "name": "winston-env-logger",
-  "description": "An express logger based on winston used to debug your app on different environments",
-  "version": "1.0.3",
+  "description": "An express logger based on winston used to debug your app, as well as collecting periodic logs on different environments",
+  "version": "1.0.4",
   "main": "index.js",
   "repository": "https://github.com/Hector101/winston-logger.git",
   "author": "hector101 <hector1014really32@gmail.com>",
@@ -17,6 +17,7 @@
     "logger",
     "environments",
     "node logger",
-    "API request logger"
+    "API request logger",
+    "monthly server logs"
   ]
 }
