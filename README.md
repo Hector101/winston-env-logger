@@ -1,22 +1,22 @@
-# winston-logger
+# winston-env-logger
 
 
 An express logger based on winston used to debug your app on different environments. It can write monthly logs to files with timestamp on production environment by setting NODE_ENV to `production`, and displays on the Console on other environments.
 
 ## Install
 
-`npm install winston-logger`
+`npm install winston-env-logger`
 
 ## Basic Usage
 
 ```javascript
 
   import express from 'express';
-  import winstonLogger from 'winston-logger';
+  import winstonEnvLogger from 'winston-env-logger';
 
   const app = express();
 
-  app.use(winstonLogger.logger());
+  app.use(winstonEnvLogger.logger());
 
 ```
 
