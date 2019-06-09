@@ -1,7 +1,7 @@
 {
   "name": "winston-env-logger",
   "description": "An express logger based on winston used to debug your app, as well as collecting periodic logs on different environments",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "repository": "https://github.com/Hector101/winston-logger.git",
   "author": "hector101 <hector1014really32@gmail.com>",
@@ -9,6 +9,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "dotenv": "^8.0.0",
+    "moment": "^2.24.0",
     "winston": "^3.2.1"
   },
   "keywords": [

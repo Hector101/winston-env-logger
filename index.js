@@ -1,4 +1,4 @@
-const winston, { createLogger, format } = require('winston');
+const winston = require('winston');
 const moment = require('moment');
 const chalk = require('chalk');
 const path = require('path');
@@ -72,15 +72,15 @@ if (shouldOutputToFile) {
   transportOptions.filename = path.resolve(__dirname, path.join('logs', `${moment().format('MMMM')} - ${moment().format('YYYY')}.log`));
 }
 
-const wLogger = createLogger({
+const wLogger = winston.createLogger({
   transports: [
     new (Transport)(transportOptions),
   ],
-  format: format.combine(
-    format.timestamp({
+  format: winston.format.combine(
+    winston.format.timestamp({
       format: 'YYYY-MM-DD HH:mm:ss',
     }),
-    format.printf(info => `${info.timestamp} ${info.level.toLowerCase()}: ${info.message}${info.splat !== undefined ? `${info.splat}` : ' '}`),
+    winston.format.printf(info => `${info.timestamp} ${info.level.toLowerCase()}: ${info.message}${info.splat !== undefined ? `${info.splat}` : ' '}`),
   ),
 });
 
