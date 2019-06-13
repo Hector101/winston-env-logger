@@ -69,7 +69,7 @@ const transportOptions = {
 };
 
 if (shouldOutputToFile) {
-  transportOptions.filename = path.resolve(__dirname, path.join('logs', `${moment().format('MMMM')} - ${moment().format('YYYY')}.log`));
+  transportOptions.filename = path.resolve(process.cwd(), path.join('logs', `${moment().format('MMMM')} - ${moment().format('YYYY')}.log`));
 }
 
 const wLogger = winston.createLogger({
